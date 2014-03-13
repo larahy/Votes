@@ -1,0 +1,10 @@
+
+<div class='row'>
+<h1>Successful Votes = <%= @campaignvotes.count %></h1>
+<h1>Failed Votes = <%= @failedvotes.count %></h1>
+
+<h2>Total Candidates = <%= @candidate_array.count %></h2>
+<%= @candidate_array.each do |candidate|%>
+<h3> <%= candidate[0].choice %>: <%= candidate.count %></h3>
+    <% end %>
+</div>
