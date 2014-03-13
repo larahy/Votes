@@ -1,22 +1,15 @@
 APPROACH 
 =========
 
-* Ruby version 2.0.0 
+* Ruby version 2.0.0, PostgresQL database, Rspec Test Suite
 
-* Postgres database
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-I was uncertain how to interpret the third bullet point in deliverables.  In the end I decided to seed the database with the file 'votes.txt', though I am not sure whether this is what you were after.
+I was uncertain how to interpret the third bullet point in deliverables.  In the end I decided to seed the database with the file 'votes.txt'**, though I am not sure whether this is what you were after. 
 
 As there were only four Campaigns, I decided to use a one to many relationship with Votes. I also decided hard code the Vote.campaign_id but I realise this is NOT COOL, and would much prefer to have done it another way but my brain wasn't playing ball at the time.
 
 I am all too aware that I have broken several coding cardinal sins in my Votes Controller, not least its girth! Again, I am positive there are several more intelligent and elegant ways of structuring my database, and moving some methods to the model but by this point I was under time constraints.
 
-Finally my tests  
+Finally my tests are far too minimal, if I had more time I would have written tests to check the code for seeding the database. 
+
+** The path to this will need to be ammended accordingly as I have not pushed this file to github.
