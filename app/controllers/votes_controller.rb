@@ -3,8 +3,8 @@ class VotesController < ApplicationController
   def index
     @votes = Vote.all
     if params[:campaign_id]
-      @campaignvotes = @votes.where(campaign: params[:campaign_id], validity: "during")
-      @failedvotes = @votes.where(campaign: params[:campaign_id], validity: "pre")
+      @campaignvotes = @votes.where(:campaign => params[:campaign_id], :validity => "during")
+      @failedvotes = @votes.where(:campaign => params[:campaign_id], :validity => ["pre", "post"])
       candidates = find_candidates(@campaignvotes)
       @candidate_array = []
       candidates.each do |candidate|
